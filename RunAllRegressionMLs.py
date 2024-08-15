@@ -206,10 +206,12 @@ def evaluate_regression_models(models, df, target_var, feature_list):
             results.append(result)
         print('model type == ' + model + '  ..END - valuate_regression_model func')
     # Run for Ensemble model if applicable
-    run_ensemble_mode = True
+    #run_ensemble_mode = True
     if run_ensemble_mode:
         model = 'ensemble_ML'
+        print('model type == ' + model + '  ..STARRING - evaluate_regression_model func')
         result = evaluate_regression_model(df, target_var, feature_list, model, run_ensemble_mode)
+        print('model type == ' + model + '  ..END - valuate_regression_model func')
         if result is not None:
             results.append(result)
 
